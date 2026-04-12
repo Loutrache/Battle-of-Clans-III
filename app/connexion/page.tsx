@@ -47,7 +47,7 @@ async function handleForgotPassword() {
   setResetLoading(true);
 
   const { error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${window.location.origin}/connexion`,
+    redirectTo: `${window.location.origin}/reset-password`,
   });
 
   if (error) {
