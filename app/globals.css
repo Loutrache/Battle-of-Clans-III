@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+}
+
+:root {
+  --background-secondary: #0e2028;
+  --accent: #6163fc;
+  --accent-hover: #7b7dff;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), serif;
+}
+
+.font-great-vibes {
+  font-family: var(--font-great-vibes), cursive;
+}
