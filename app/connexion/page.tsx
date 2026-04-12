@@ -51,7 +51,7 @@ async function handleForgotPassword() {
   });
 
   if (error) {
-    setMessage("Impossible d’envoyer l’email de réinitialisation.");
+    setMessage(error.message);
     setResetLoading(false);
     return;
   }
