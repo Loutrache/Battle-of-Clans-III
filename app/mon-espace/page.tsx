@@ -1283,18 +1283,31 @@ return;
 }
   if (loading) {
     return (
-      <main className="min-h-screen bg-black px-6 py-16 text-white">
+      <main
+  className="relative min-h-screen px-6 py-16 text-white"
+  style={{
+    backgroundImage: "url('/images/fond-faille.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  }}
+>
+  <div className="absolute inset-0 bg-black/30" />
+
+  <div className="relative z-10">
         <div className="mx-auto max-w-4xl">
           <p className="font-cormorant text-2xl">Chargement...</p>
         </div>
-      </main>
+  </div>
+</main>
     );
   }
 
   if (!profile?.team_id) {
     return (
       <main className="min-h-screen bg-black px-6 py-16 text-white">
-        <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-[#0E2028] p-8">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-[#0E2028]/75 p-8">
           <p className="font-cinzel mb-4 text-sm uppercase tracking-[0.4em] text-[#6163FC]">
             Battle of Clans III
           </p>
@@ -1318,8 +1331,20 @@ return;
 
   if (!profile.clan_confirmed) {
     return (
-      <main className="min-h-screen bg-black px-6 py-16 text-white">
-        <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-[#0E2028] p-8">
+      <main
+  className="relative min-h-screen px-6 py-16 text-white"
+  style={{
+    backgroundImage: "url('/images/fond-faille.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  }}
+>
+  <div className="absolute inset-0 bg-black/40" />
+
+  <div className="relative z-10">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-[#0E2028]/75 p-8">
           <p className="font-cinzel mb-4 text-sm uppercase tracking-[0.4em] text-[#6163FC]">
             Battle of Clans III
           </p>
@@ -1360,14 +1385,27 @@ return;
   </p>
 )}
         </div>
+        </div>
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-black px-6 py-16 text-white">
+    <main
+  className="relative min-h-screen px-6 py-16 text-white"
+  style={{
+    backgroundImage: "url('/images/fond-faille.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  }}
+>
+  <div className="absolute inset-0 bg-black/40" />
+
+  <div className="relative z-10">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl border border-white/10 bg-[#0E2028] p-8 shadow-xl">
+        <div className="rounded-3xl border border-white/10 bg-[#0E2028]/75 p-8 shadow-xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="font-cinzel mb-4 text-sm uppercase tracking-[0.4em] text-[#6163FC]">
@@ -1459,7 +1497,7 @@ return;
                 </h2>
 
                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Clan du joueur
                     </p>
@@ -1472,7 +1510,7 @@ return;
 </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Score personnel
                     </p>
@@ -1481,7 +1519,7 @@ return;
 </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Score du clan
                     </p>
@@ -1490,7 +1528,7 @@ return;
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Rang du clan
                     </p>
@@ -1500,7 +1538,7 @@ return;
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                <div className="mt-6 rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
   <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
     Corruptions actives
   </p>
@@ -1552,7 +1590,7 @@ return;
     </h2>
 
     {activeWarTab === "arsenal" && (
-      <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+      <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
         <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
           Arsenal du clan
         </h3>
@@ -1599,7 +1637,7 @@ return;
     )}
 
     {activeWarTab === "declarer" && (
-  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
     <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
       Déclarer la guerre
     </h3>
@@ -1718,7 +1756,7 @@ return;
 
     {activeWarTab === "carnet" && (
   <div className="space-y-6">
-    <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+    <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
       <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
         Attaques reçues
       </h3>
@@ -1766,7 +1804,7 @@ return;
       )}
     </div>
 
-    <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+    <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
       <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
         Attaques lancées
       </h3>
@@ -1825,7 +1863,7 @@ return;
 
             {activeTab === "infiltration" && (
   <div className="space-y-6">
-    <div className="bg-[#0E2028] border border-[#6163FC]/30 rounded-2xl p-6">
+    <div className="bg-[#0E2028]/75 border border-[#6163FC]/30 rounded-2xl p-6">
       <h2 className="text-2xl text-[#6163FC] mb-2 font-cinzel">
         Infiltration
       </h2>
@@ -1876,7 +1914,7 @@ const showBlockedInfiltration =
   return (
           <div
             key={enemyClan.id}
-            className="bg-[#0E2028] border border-[#6163FC]/20 rounded-2xl p-6 space-y-4"
+            className="bg-[#0E2028]/75 border border-[#6163FC]/20 rounded-2xl p-6 space-y-4"
           >
             <div>
               <h3 className="text-xl text-[#6163FC] font-cinzel capitalize">
@@ -2078,7 +2116,7 @@ const showBlockedInfiltration =
                       value={bookTitle}
                       onChange={(e) => setBookTitle(e.target.value)}
                       placeholder="Titre du livre"
-                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
                     />
                   </div>
 
@@ -2090,7 +2128,7 @@ const showBlockedInfiltration =
                       value={author}
                       onChange={(e) => setAuthor(e.target.value)}
                       placeholder="Auteur"
-                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
                     />
                   </div>
 
@@ -2102,7 +2140,7 @@ const showBlockedInfiltration =
                       value={pages}
                       onChange={(e) => setPages(e.target.value)}
                       placeholder="Nombre de pages"
-                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
                     />
                   </div>
 
@@ -2114,7 +2152,7 @@ const showBlockedInfiltration =
                       type="date"
                       value={startDate}
                       onChange={(e) => setStartDate(e.target.value)}
-                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
                     />
                   </div>
 
@@ -2126,7 +2164,7 @@ const showBlockedInfiltration =
                       type="date"
                       value={endDate}
                       onChange={(e) => setEndDate(e.target.value)}
-                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+                      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
                     />
                   </div>
 
@@ -2137,7 +2175,7 @@ const showBlockedInfiltration =
 <select
   value={selectedChallenge}
   onChange={(e) => setSelectedChallenge(e.target.value)}
-  className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+  className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
 >
   <option value="">
     {availableChallenges.length > 0
@@ -2159,7 +2197,7 @@ const showBlockedInfiltration =
     <select
       value={selectedSecondChallenge}
       onChange={(e) => setSelectedSecondChallenge(e.target.value)}
-      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028] px-4 py-3 text-lg text-white outline-none"
+      className="font-cormorant w-full rounded-xl border border-white/10 bg-[#0E2028]/75 px-4 py-3 text-lg text-white outline-none"
     >
       <option value="">
         {availableChallenges.length > 0
@@ -2200,7 +2238,7 @@ const showBlockedInfiltration =
       {Object.entries(challengesByPoints).map(([points, groupedChallenges]) => (
         <section
           key={points}
-          className="rounded-3xl border border-white/10 bg-[#0E2028] p-6"
+          className="rounded-3xl border border-white/10 bg-[#0E2028]/75 p-6"
         >
           <h3 className="font-cinzel mb-5 text-xl uppercase tracking-[0.2em] text-[#6163FC]">
             {points} points
@@ -2270,7 +2308,7 @@ const showBlockedInfiltration =
 
                 {activeFlashChallenges.length === 0 &&
 activeFlashEvents.length === 0 ? (
-  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-6">
+  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-6">
     <p className="font-cormorant text-2xl text-white/70">
       Pas de défi, malus ou règle flash pour le moment.
     </p>
@@ -2303,7 +2341,7 @@ const needsTextInput =
       return (
         <div
           key={flash.id}
-          className="rounded-2xl border border-[#6163FC]/20 bg-[#0E2028] p-6"
+          className="rounded-2xl border border-[#6163FC]/20 bg-[#0E2028]/75 p-6"
         >
           <div className="mb-4 flex items-start justify-between gap-4">
             <div>
@@ -2420,7 +2458,7 @@ const needsTextInput =
     {activeFlashEvents.map((flash) => (
   <div
     key={`event-${flash.id}`}
-    className="rounded-2xl border border-[#6163FC]/20 bg-[#0E2028] p-6"
+    className="rounded-2xl border border-[#6163FC]/20 bg-[#0E2028]/75 p-6"
   >
     <div className="mb-4 flex items-start justify-between gap-4">
       <div>
@@ -2464,6 +2502,8 @@ const needsTextInput =
 )}
         </div>
       </div>
+      </div>
+   
       <ConfirmModal
   isOpen={confirmModalOpen}
   title={confirmModalTitle}

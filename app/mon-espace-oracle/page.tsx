@@ -1038,10 +1038,10 @@ return;
         key={item.id}
         className={`rounded-2xl border p-5 ${
           item.is_active
-            ? "border-[#6163FC]/50 bg-[#0E2028]"
+            ? "border-[#6163FC]/50 bg-[#0E2028]/75"
             : isUsed
             ? "border-white/10 bg-black/10 opacity-60"
-            : "border-white/10 bg-[#0E2028]"
+            : "border-white/10 bg-[#0E2028]/75"
         }`}
       >
         <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
@@ -1115,10 +1115,10 @@ return;
         key={item.id}
         className={`rounded-2xl border p-5 ${
           item.is_active
-            ? "border-[#6163FC]/50 bg-[#0E2028]"
+            ? "border-[#6163FC]/50 bg-[#0E2028]/75"
             : isUsed
             ? "border-white/10 bg-black/10 opacity-60"
-            : "border-white/10 bg-[#0E2028]"
+            : "border-white/10 bg-[#0E2028]/75"
         }`}
       >
         <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
@@ -1172,19 +1172,44 @@ return;
   }
 
   if (loading) {
-    return (
-      <main className="min-h-screen bg-black px-6 py-16 text-white">
+  return (
+    <main
+      className="relative min-h-screen px-6 py-16 text-white"
+      style={{
+        backgroundImage: "url('/images/fond-faille.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/30" />
+
+      <div className="relative z-10">
         <div className="mx-auto max-w-7xl">
           <p className="font-cormorant text-2xl">Chargement...</p>
         </div>
-      </main>
-    );
-  }
+      </div>
+    </main>
+  );
+}
 
   return (
-    <main className="min-h-screen bg-black px-6 py-16 text-white">
+  <main
+    className="relative min-h-screen px-6 py-16 text-white"
+    style={{
+      backgroundImage: "url('/images/fond-faille.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}
+  >
+    <div className="absolute inset-0 bg-black/40" />
+
+    <div className="relative z-10">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl border border-white/10 bg-[#0E2028] p-8 shadow-xl">
+        <div className="rounded-3xl border border-white/10 bg-[#0E2028]/70 p-8 shadow-xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="font-cinzel mb-4 text-sm uppercase tracking-[0.4em] text-[#6163FC]">
@@ -1298,7 +1323,7 @@ return;
                 </h2>
 
                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Score du clan
                     </p>
@@ -1307,7 +1332,7 @@ return;
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Classement
                     </p>
@@ -1316,7 +1341,7 @@ return;
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                  <div className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                     <p className="font-cinzel text-sm uppercase tracking-[0.2em] text-[#6163FC]">
                       Modifier le score du clan
                     </p>
@@ -1362,7 +1387,7 @@ return;
                   </div>
                 </div>
 
-                <div className="mt-8 rounded-2xl border border-white/10 bg-[#0E2028] p-5">
+                <div className="mt-8 rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5">
                   <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
                     Membres du clan
                   </h3>
@@ -1441,7 +1466,7 @@ return;
                   {clanChallengeHistory.map((row) => (
                     <div
                       key={row.id}
-                      className="rounded-2xl border border-white/10 bg-[#0E2028] p-5"
+                      className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5"
                     >
                       <p className="font-cormorant text-2xl text-white">
                         {getUsernameByUserId(row.user_id)}
@@ -1487,7 +1512,7 @@ return;
                   {clanAttacks.map((attack) => (
                     <div
                       key={attack.id}
-                      className="rounded-2xl border border-white/10 bg-[#0E2028] p-5"
+                      className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5"
                     >
                       <p className="font-cormorant text-2xl text-white">
                         {attack.attack_name}
@@ -1565,7 +1590,7 @@ return;
                       return (
                         <div
                           key={enemyTeam.id}
-                          className="rounded-2xl border border-white/10 bg-[#0E2028] p-5"
+                          className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5"
                         >
                           <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
                             {getPluralClanName(enemyTeam.name)}
@@ -1677,7 +1702,7 @@ return;
           return (
             <div
               key={severity}
-              className="rounded-2xl border border-white/10 bg-[#0E2028] p-5"
+              className="rounded-2xl border border-white/10 bg-[#0E2028]/75 p-5"
             >
               <h3 className="font-cinzel text-lg uppercase tracking-[0.2em] text-white">
                 {severityLabel}
@@ -1838,6 +1863,7 @@ return;
             </p>
           )}
         </div>
+      </div>
       </div>
       <ConfirmModal
   isOpen={confirmModalOpen}
