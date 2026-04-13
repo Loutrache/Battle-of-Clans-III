@@ -1959,6 +1959,17 @@ const showBlockedInfiltration =
     </button>
   </div>
 )}
+{canStartInfiltration && !isChief && !isOracle && !instabilityActive && (
+  <div className="space-y-3">
+    <p className="font-cormorant text-2xl text-white">
+      Attaque active des {getPluralClanName(enemyClan.name)} en cours.
+    </p>
+
+    <p className="font-cormorant text-lg text-white/70">
+      Seul le chef de clan peut démarrer l’infiltration.
+    </p>
+  </div>
+)}
 
 {showActiveInfiltration && !instabilityActive && (
   <div className="space-y-4">
