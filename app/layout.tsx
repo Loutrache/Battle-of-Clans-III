@@ -35,55 +35,47 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${cinzel.variable} ${cormorant.variable} ${greatVibes.variable} bg-black text-white`}
-      >
+  className={`${cinzel.variable} ${cormorant.variable} ${greatVibes.variable} overflow-x-hidden bg-black text-white`}
+>
         <header className="border-b border-white/10">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-            <a
-              href="/"
-              className="font-cinzel text-sm uppercase tracking-[0.4em] text-[#6163FC]"
-            >
-              Battle of Clans III
-            </a>
+  <nav className="mx-auto max-w-7xl px-4 py-5 md:px-6">
+    <div className="flex items-center justify-between">
+      <Link
+        href="/"
+        className="font-cinzel text-[11px] uppercase tracking-[0.3em] text-[#6163FC] md:text-sm md:tracking-[0.4em]"
+      >
+        Battle of Clans III
+      </Link>
+    </div>
 
-            <div className="font-cormorant flex min-w-max gap-6 overflow-x-auto px-4 text-lg font-medium text-zinc-300 md:min-w-0 md:text-xl">
-              <a href="/" className="font-cormorant whitespace-nowrap transition hover:text-white">
-                Accueil
-              </a>
-              <a
-                href="/histoire"
-                className="font-cormorant whitespace-nowrap transition hover:text-white"
-              >
-                Histoire
-              </a>
-              <a
-                href="/regles"
-                className="font-cormorant whitespace-nowrap transition hover:text-white"
-              >
-                Règles
-              </a>
-              <a
-                href="/clans"
-                className="font-cormorant whitespace-nowrap transition hover:text-white"
-              >
-                Clans
-              </a>
-              <a
-                href="/defis"
-                className="font-cormorant whitespace-nowrap transition hover:text-white"
-              >
-                Défis
-              </a>
-              <a
-                href="/recommandations-oracles"
-                className="font-cormorant whitespace-nowrap transition hover:text-white"
-              >
-                Recos de la Loutrache
-              </a>
-               <HeaderAuthLink />
-            </div>
-          </nav>
-        </header>
+    <div className="mt-4 overflow-x-auto pb-2">
+      <div className="font-cormorant flex min-w-max items-center gap-5 pr-4 text-lg font-medium text-zinc-300 md:flex-wrap md:justify-end md:gap-6 md:pr-0 md:text-xl">
+        <Link href="/" className="whitespace-nowrap transition hover:text-white">
+          Accueil
+        </Link>
+        <Link href="/histoire" className="whitespace-nowrap transition hover:text-white">
+          Histoire
+        </Link>
+        <Link href="/regles" className="whitespace-nowrap transition hover:text-white">
+          Règles
+        </Link>
+        <Link href="/clans" className="whitespace-nowrap transition hover:text-white">
+          Clans
+        </Link>
+        <Link href="/defis" className="whitespace-nowrap transition hover:text-white">
+          Défis
+        </Link>
+        <Link
+          href="/recommandations-oracles"
+          className="whitespace-nowrap transition hover:text-white"
+        >
+          Recos de la Loutrache
+        </Link>
+        <HeaderAuthLink />
+      </div>
+    </div>
+  </nav>
+</header>
 
         {children}
       </body>
