@@ -10,7 +10,7 @@ export default function ReglesPage() {
           Règles du jeu
         </h1>
 
-<div className="font-cormorant space-y-10 text-base leading-relaxed text-white/90 text-justify md:text-[1.35rem]">          <section>
+<div className="font-cormorant space-y-2 text-justify text-xl leading-[1.55] text-white/90 md:text-2xl">          <section>
             <h2 className="mb-6 text-2xl font-semibold text-white md:text-4xl">
               Défis
             </h2>

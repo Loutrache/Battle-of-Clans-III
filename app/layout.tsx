@@ -46,37 +46,37 @@ export default function RootLayout({
               Battle of Clans III
             </a>
 
-            <div className="font-cormorant flex gap-6 text-xl font-medium text-zinc-300">
-              <a href="/" className="font-cormorant transition hover:text-white">
+            <div className="font-cormorant flex min-w-max gap-6 overflow-x-auto px-4 text-lg font-medium text-zinc-300 md:min-w-0 md:text-xl">
+              <a href="/" className="font-cormorant whitespace-nowrap transition hover:text-white">
                 Accueil
               </a>
               <a
                 href="/histoire"
-                className="font-cormorant transition hover:text-white"
+                className="font-cormorant whitespace-nowrap transition hover:text-white"
               >
                 Histoire
               </a>
               <a
                 href="/regles"
-                className="font-cormorant transition hover:text-white"
+                className="font-cormorant whitespace-nowrap transition hover:text-white"
               >
                 Règles
               </a>
               <a
                 href="/clans"
-                className="font-cormorant transition hover:text-white"
+                className="font-cormorant whitespace-nowrap transition hover:text-white"
               >
                 Clans
               </a>
               <a
                 href="/defis"
-                className="font-cormorant transition hover:text-white"
+                className="font-cormorant whitespace-nowrap transition hover:text-white"
               >
                 Défis
               </a>
               <a
                 href="/recommandations-oracles"
-                className="font-cormorant transition hover:text-white"
+                className="font-cormorant whitespace-nowrap transition hover:text-white"
               >
                 Recos de la Loutrache
               </a>
