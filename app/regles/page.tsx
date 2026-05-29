@@ -34,7 +34,7 @@ export default function ReglesPage() {
             </p>
 
             <p className="mt-1">
-              Un même défi ne peut être réalisé par chaque membre d’une équipe,
+              Un même défi peut être réalisé par chaque membre d’une équipe,
               mais qu’une fois par personne.
             </p>
 
